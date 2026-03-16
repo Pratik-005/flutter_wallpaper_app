@@ -16,7 +16,6 @@ class Fullscreen extends StatefulWidget {
 
 class _FullscreenState extends State<Fullscreen> {
   Uint8List? image;
-  Uint8List? _croppedData;
 
   final _controller = CropController();
   @override
@@ -89,7 +88,7 @@ class _FullscreenState extends State<Fullscreen> {
                 MaterialPageRoute(builder: (context) => Home()),
               );
 
-            case CropFailure(:final cause):
+            case CropFailure():
               return;
           }
         },
